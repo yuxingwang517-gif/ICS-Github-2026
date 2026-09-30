@@ -2,5 +2,5 @@
 
 int main()
 {
-    printf("I am learning Git step by step.\n");
+    printf("Git records how my code changes over time.\n");
 }
