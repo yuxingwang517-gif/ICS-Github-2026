@@ -52,9 +52,9 @@
 
 ## 五、冲突证据与解决结果
 
-下面的图由冲突发生时保存的**真实命令输出和文件内容**排版生成，便于在报告中阅读；[原始文本](evidence/merge-conflict.txt)保留了完整输出和两侧提交的 SHA。它不是操作系统直接截取的屏幕截图。
+冲突发生后，我保存了 Git 的原始输出及当时 `main.c` 中的冲突标记；[原始文本](evidence/merge-conflict.txt)还保留了两侧提交的 SHA。下图是用记事本打开这份记录时截取的实际窗口画面，可以看到 `CONFLICT (content)`、`UU main.c` 和冲突标记。它记录的是已保存的原始内容，不是执行 `git merge` 当时的终端现场截图。
 
-![Git 合并冲突的命令输出与冲突标记](evidence/merge-conflict-record.png)
+![记事本中显示的 Git 冲突原始记录](evidence/merge-conflict-screenshot.png)
 
 最终 `main.c` 的关键部分为：
 
@@ -64,6 +64,10 @@ printf("Git branches help me explore ideas safely.\n");
 ```
 
 这两行分别保留了 `main` 和 `feature` 的内容；最终文件中不再有冲突标记。提交历史中的合并节点证明两个分支已经汇合。程序的输出也不再等于模板的 `Hello, world!`。
+
+下图是用记事本打开解决冲突后的 `main.c` 时截取的窗口画面，显示两条输出均已保留。
+
+![记事本中显示的冲突解决后 main.c](evidence/merge-resolved-screenshot.png)
 
 ## 六、结果与体会
 
