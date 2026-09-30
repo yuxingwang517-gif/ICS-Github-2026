@@ -67,7 +67,7 @@ printf("Git branches help me explore ideas safely.\n");
 
 ## 六、结果与体会
 
-实验完成了模板建仓、首次修改、分支提交以及真实冲突合并。`git diff --check` 用于检查改动中的空白错误。自动评分以 GitHub Actions 的运行结果为准。
+实验完成了模板建仓、首次修改、分支提交以及真实冲突合并。`git diff --check` 用于检查改动中的空白错误。推送到 GitHub 后，[`main` 分支的自动评分运行](https://github.com/yuxingwang517-gif/ICS-Github-2026/actions/runs/36730217537)已成功，日志显示 `Hello World Modified` 测试 1/1 通过，自动评分为 100/100。报告部分仍由助教单独评分。
 
 我认识到冲突不是文件损坏，而是 Git 无法替开发者判断两个修改的取舍。解决时应先读懂两边的意图，再选择或组合内容，检查文件后再提交。
 
