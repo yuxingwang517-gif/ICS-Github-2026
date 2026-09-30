@@ -1,0 +1,26 @@
+命令: git merge feature
+实际输出:
+Auto-merging main.c
+CONFLICT (content): Merge conflict in main.c
+Automatic merge failed; fix conflicts and then commit the result.
+
+命令: git status --short --branch
+## main...origin/main [ahead 2]
+UU main.c
+
+冲突时的 main.c:
+#include <stdio.h>
+
+int main()
+{
+<<<<<<< HEAD
+    printf("Git records how my code changes over time.\n");
+=======
+    printf("Git branches help me explore ideas safely.\n");
+>>>>>>> feature
+}
+
+合并前 main 提交:
+4844cd3eb26ea436312257aaceff5173b417f06c
+feature 提交:
+d107b5e7fc9b99cb927d100a7cfcdf46670a3a16
